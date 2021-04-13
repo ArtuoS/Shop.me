@@ -1,0 +1,70 @@
+﻿Users
+	Id : int
+	Name : string
+	LastName : string
+	DateOfBirthday : DateTime
+	Gender : int
+	Email : string
+	Password : string
+	AdressId : int
+	
+Adresses
+	Id : int
+	UserId : int
+	Country : string
+	State : string
+	City : string
+
+Stores
+	Id : int
+	Name : string
+	Logo : blob
+	
+UserStores
+	UserId : int
+	StoreId : int
+
+StoreProducts
+	StoreId : int
+	ProductId : int
+
+Products
+	Id : int
+	Name : string
+	Price : double
+	Weight : double
+	UnitOfMeasurement : int
+	
+ProductCategories
+	ProductId : int
+	CategoryId : int
+
+Categories
+	Id : int
+	Name : string
+	Description : string
+
+Orders
+	Id : int
+	UserId : int
+	Price : double
+	DiscountCoupon : string
+
+OrderProducts
+	OrderId : int
+	ProductId : int
+	
+DiscountCoupons
+	Id : int
+	Coupon : string
+	DiscountPercentage : double
+	ExpirationDate : DateTime
+
+Shippings
+	Id : int
+	User : int
+	ShipFrom : int
+	ShipTo : int
+	ExpectedArriveDate : DateTime
+	ArriveDate : DateTime
+	DepartureDate : DateTime

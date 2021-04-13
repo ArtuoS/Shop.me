@@ -1,0 +1,17 @@
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csprojAssemblyReference.cache
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.AssemblyInfo.cs
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.deps.json
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.runtimeconfig.json
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.runtimeconfig.dev.json
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.dll
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.pdb
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csproj.CopyComplete
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.dll
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.pdb
+C:\Users\arthu\source\repos\ShopMe\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.genruntimeconfig.cache
