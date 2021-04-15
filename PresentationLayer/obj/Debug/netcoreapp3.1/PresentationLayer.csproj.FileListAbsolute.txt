@@ -166,3 +166,5 @@ D:\C#\Shop.me\PresentationLayer\obj\Debug\netcoreapp3.1\PresentationLayer.pdb
 D:\C#\Shop.me\PresentationLayer\obj\Debug\netcoreapp3.1\PresentationLayer.genruntimeconfig.cache
 D:\C#\Shop.me\PresentationLayer\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\C#\Shop.me\PresentationLayer\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\C#\Shop.me\PresentationLayer\bin\Debug\netcoreapp3.1\BusinessLogicalLayer.dll
+D:\C#\Shop.me\PresentationLayer\bin\Debug\netcoreapp3.1\BusinessLogicalLayer.pdb
