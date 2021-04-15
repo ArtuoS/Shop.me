@@ -14,6 +14,7 @@ namespace Entities.Entities
         public EUnitOfMeasurement UnitOfMeasurement { get; set; }
         public ICollection<Category> Categories { get; set; }
         public ICollection<Store> Stores { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }
 

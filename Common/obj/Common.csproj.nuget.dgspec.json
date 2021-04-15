@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj": {}
+    "D:\\C#\\Shop.me\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj": {
+    "D:\\C#\\Shop.me\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\C#\\Shop.me\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj",
+        "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\obj\\",
+        "outputPath": "D:\\C#\\Shop.me\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

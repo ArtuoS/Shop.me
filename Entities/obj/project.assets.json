@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj",
+      "projectUniqueName": "D:\\C#\\Shop.me\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj",
+      "projectPath": "D:\\C#\\Shop.me\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\obj\\",
+      "outputPath": "D:\\C#\\Shop.me\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -58,8 +58,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj"
+            "D:\\C#\\Shop.me\\Common\\Common.csproj": {
+              "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj"
             }
           }
         }

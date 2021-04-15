@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj": {}
+    "D:\\C#\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj": {
+    "D:\\C#\\Shop.me\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\C#\\Shop.me\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj",
+        "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\obj\\",
+        "outputPath": "D:\\C#\\Shop.me\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj": {
+    "D:\\C#\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj",
+        "projectUniqueName": "D:\\C#\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj",
         "projectName": "DataAcessLayer",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj",
+        "projectPath": "D:\\C#\\Shop.me\\DataAcessLayer\\DataAcessLayer.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\DataAcessLayer\\obj\\",
+        "outputPath": "D:\\C#\\Shop.me\\DataAcessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,8 +90,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj"
+              "D:\\C#\\Shop.me\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\C#\\Shop.me\\Entities\\Entities.csproj"
               }
             }
           }
@@ -107,6 +107,10 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.4, )"
             },
@@ -136,14 +140,14 @@
         }
       }
     },
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj": {
+    "D:\\C#\\Shop.me\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\C#\\Shop.me\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\Entities.csproj",
+        "projectPath": "D:\\C#\\Shop.me\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Entities\\obj\\",
+        "outputPath": "D:\\C#\\Shop.me\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -164,8 +168,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj"
+              "D:\\C#\\Shop.me\\Common\\Common.csproj": {
+                "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj"
               }
             }
           }

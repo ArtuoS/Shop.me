@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {}
+    "D:\\C#\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\source\\repos\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
+    "D:\\C#\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
+        "projectUniqueName": "D:\\C#\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
         "projectName": "BusinessLogicalLayer",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
+        "projectPath": "D:\\C#\\Shop.me\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\BusinessLogicalLayer\\obj\\",
+        "outputPath": "D:\\C#\\Shop.me\\BusinessLogicalLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

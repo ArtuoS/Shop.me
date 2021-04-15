@@ -7,3 +7,12 @@ C:\Users\arthu\source\repos\ShopMe\Common\obj\Debug\netcoreapp3.1\Common.Assembl
 C:\Users\arthu\source\repos\ShopMe\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 C:\Users\arthu\source\repos\ShopMe\Common\obj\Debug\netcoreapp3.1\Common.dll
 C:\Users\arthu\source\repos\ShopMe\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\C#\Shop.me\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\C#\Shop.me\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\C#\Shop.me\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\C#\Shop.me\Common\obj\Debug\netcoreapp3.1\Common.pdb

@@ -9,7 +9,7 @@ namespace Entities.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public byte Logo { get; set; }
-        public User User { get; set; }
+        public ICollection<User> Users { get; set; }
         public ICollection<Product> Products { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HM7YSTnCsM/+B1z6j04wMx2dfFqEHTQp3F9GxFObgWwkCwShYg/vrPwP3JBnyVqNM+xJDXy/oSqZ4Ga8+gHvKg==",
+  "dgSpecHash": "0iXKyDePbOhBRL0qlSQYPK0MvWB1HymbVQA7xoggSG9LWG46xl2/47Cir+fG7zyGljZnRF5TBr/KSemBv9TIqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\source\\repos\\Shop.me\\Common\\Common.csproj",
+  "projectFilePath": "D:\\C#\\Shop.me\\Common\\Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -7,3 +7,12 @@ C:\Users\arthu\source\repos\ShopMe\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\
 C:\Users\arthu\source\repos\ShopMe\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.csproj.CoreCompileInputs.cache
 C:\Users\arthu\source\repos\ShopMe\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.dll
 C:\Users\arthu\source\repos\ShopMe\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\BusinessLogicalLayer.deps.json
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\BusinessLogicalLayer.dll
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\BusinessLogicalLayer.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.csprojAssemblyReference.cache
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.AssemblyInfoInputs.cache
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.AssemblyInfo.cs
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.csproj.CoreCompileInputs.cache
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.dll
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.pdb
