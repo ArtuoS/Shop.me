@@ -11,6 +11,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Design;
+using Entities.Interfaces;
+using BusinessLogicalLayer;
+using PresentationLayer.Models.InsertViewModels;
+using Entities.Entities;
+using AutoMapper;
+using Entities;
 
 namespace PresentationLayer
 {
@@ -27,10 +33,22 @@ namespace PresentationLayer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ShopContext>(options =>
+            //services.AddDbContext<ShopContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration.GetConnectionString("ShopContextConnection"));
+            //});
+
+            Setting.ConnectionString = Configuration.GetConnectionString("ShopContextConnection");
+
+            var config = new AutoMapper.MapperConfiguration(cfg =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("ShopContextConnection"));
+                cfg.CreateMap<UserInsertViewModel, User>();
             });
+
+            IMapper mapper = config.CreateMapper();
+
+            services.AddSingleton(mapper);
+            services.AddTransient<IUserService, UserBLL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

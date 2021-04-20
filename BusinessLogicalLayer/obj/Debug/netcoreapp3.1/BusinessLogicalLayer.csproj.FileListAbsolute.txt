@@ -16,3 +16,10 @@ D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.
 D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.csproj.CoreCompileInputs.cache
 D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.dll
 D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\Common.dll
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.dll
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\Entities.dll
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\DataAcessLayer.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\bin\Debug\netcoreapp3.1\Common.pdb
+D:\C#\Shop.me\BusinessLogicalLayer\obj\Debug\netcoreapp3.1\BusinessLogicalLayer.csproj.CopyComplete

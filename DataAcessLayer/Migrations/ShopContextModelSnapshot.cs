@@ -34,27 +34,6 @@ namespace DataAcessLayer.Migrations
                     b.ToTable("CategoryProduct");
                 });
 
-            modelBuilder.Entity("Entities.Entities.Adress", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("City")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Country")
-                        .HasColumnType("int");
-
-                    b.Property<int>("State")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Adresses");
-                });
-
             modelBuilder.Entity("Entities.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -206,8 +185,11 @@ namespace DataAcessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AdressId")
-                        .HasColumnType("int");
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateOfBirthday")
                         .HasColumnType("datetime2");
@@ -235,9 +217,10 @@ namespace DataAcessLayer.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("AdressId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
@@ -302,17 +285,6 @@ namespace DataAcessLayer.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Entities.Entities.User", b =>
-                {
-                    b.HasOne("Entities.Entities.Adress", "Adress")
-                        .WithMany("Users")
-                        .HasForeignKey("AdressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Adress");
-                });
-
             modelBuilder.Entity("OrderProduct", b =>
                 {
                     b.HasOne("Entities.Entities.Order", null)
@@ -356,11 +328,6 @@ namespace DataAcessLayer.Migrations
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Entities.Entities.Adress", b =>
-                {
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

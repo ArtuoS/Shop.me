@@ -4,32 +4,62 @@ using Entities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAcessLayer
 {
     public class UserDAL : IUserService
     {
-        public Response Delete(User item)
+        private readonly ShopContext _db;
+
+        public UserDAL()
+        {
+            _db = new ShopContext();
+        }
+
+        public Task<Response> Delete(User item)
         {
             throw new NotImplementedException();
         }
 
-        public QueryResponse<User> GetAll()
+        public Task<QueryResponse<User>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public SingleResponse<User> GetById(int id)
+        public Task<SingleResponse<User>> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Response Insert(User item)
+        public async Task<Response> Insert(User item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var context = _db)
+                {
+                    await _db.Users.AddAsync(item);
+                    //await _db.SaveChangesAsync();
+                    return new Response()
+                    {
+                        Message = "User created.",
+                        Success = true
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return new Response()
+                {
+                    ExceptionMessage = ex.ToString(),
+                    Message = "Failed! User not created.",
+                    Success = false
+                };
+            }
         }
 
-        public Response Update(User item)
+        public Task<Response> Update(User item)
         {
             throw new NotImplementedException();
         }
