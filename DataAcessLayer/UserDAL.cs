@@ -1,4 +1,5 @@
 ﻿using Common;
+using Common.ResponseModels;
 using Entities.Entities;
 using Entities.Interfaces;
 using System;
@@ -39,23 +40,13 @@ namespace DataAcessLayer
                 using (var context = _db)
                 {
                     await _db.Users.AddAsync(item);
-                    //await _db.SaveChangesAsync();
-                    return new Response()
-                    {
-                        Message = "User created.",
-                        Success = true
-                    };
+                    await _db.SaveChangesAsync();
+                    return ResponseModels.SuccessResponseModel();
                 }
             }
             catch (Exception ex)
             {
-
-                return new Response()
-                {
-                    ExceptionMessage = ex.ToString(),
-                    Message = "Failed! User not created.",
-                    Success = false
-                };
+                return ResponseModels.FailedResponseModel(ex.ToString());
             }
         }
 

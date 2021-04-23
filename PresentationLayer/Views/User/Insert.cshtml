@@ -87,22 +87,17 @@
                 state: $("#State").val(),
                 city: $("#City").val()
             };
-
+                
             var json = JSON.stringify(user);
 
             $.ajax({
                 type: 'POST',
                 url: '/User/Insert',
                 data: json,
-                dataType: 'json',
                 contentType: 'application/json',
-                sucess: function () {
-                    alert('Inserted.');
-                }
+                dataType: 'html'
             });
         });
-
-
     });
 </script>
 

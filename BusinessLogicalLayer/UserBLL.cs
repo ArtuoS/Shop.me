@@ -1,4 +1,5 @@
 ﻿using Common;
+using Common.ResponseModels;
 using DataAcessLayer;
 using Entities.Entities;
 using Entities.Interfaces;
@@ -19,11 +20,10 @@ namespace BusinessLogicalLayer
             {
                 return await _userDAL.Insert(item);
             }
-            return new Response()
+            else
             {
-                Success = false,
-                Message = "Insert failed."
-            };
+                return ResponseModels.FailedResponseModel("Failed in BLL!");
+            }
         }
 
         public Task<Response> Update(User item)
