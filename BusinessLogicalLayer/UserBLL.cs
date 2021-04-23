@@ -3,6 +3,7 @@ using Common.ResponseModels;
 using DataAcessLayer;
 using Entities.Entities;
 using Entities.Interfaces;
+using Entities.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +17,8 @@ namespace BusinessLogicalLayer
 
         public async Task<Response> Insert(User item)
         {
-            if (item != null)
+            NullPropertyVerifier.IsAnyPropertyNull(item);
+            if (NullPropertyVerifier.NullProperties.Count == 0)
             {
                 return await _userDAL.Insert(item);
             }

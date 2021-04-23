@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "37dPBFbZyLUYRIlVwgh9WFzRfjJ/uoys7RFyL7C2yS7kAkgNqX+QdKT/7rcLQqf990y9uzqlrHOb5AhHA1Znkw==",
+  "dgSpecHash": "Ej+eJHW4lR4ZaZS/aQ0eBq0o+YmEFgHKIEtxVk7ylbZf1VehQUgfU/4p7YTPrMfG7A/ORAM7LRQUVk2An/RePw==",
   "success": true,
   "projectFilePath": "D:\\C#\\Shop.me\\PresentationLayer\\PresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
