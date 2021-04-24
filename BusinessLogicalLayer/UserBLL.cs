@@ -18,13 +18,13 @@ namespace BusinessLogicalLayer
         public async Task<Response> Insert(User item)
         {
             NullPropertyVerifier.IsAnyPropertyNull(item);
-            if (NullPropertyVerifier.NullProperties.Count == 0)
+            if (!NullPropertyVerifier.NullProperties.HasNullProperties())
             {
                 return await _userDAL.Insert(item);
             }
             else
             {
-                return ResponseModels.FailedResponseModel("Failed in BLL!");
+                return ResponseModels.FailedResponseModel(NullPropertyVerifier.NullProperties.NullPropertiesToSting());
             }
         }
 
