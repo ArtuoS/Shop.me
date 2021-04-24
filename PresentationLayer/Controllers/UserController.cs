@@ -38,6 +38,7 @@ namespace PresentationLayer.Controllers
         {
             User user = mapper.Map<User>(model);
             Response response = await userBLL.Insert(user);
+
             return View();
         }
     }

@@ -58,7 +58,7 @@
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input id="btnInsert" type="submit" class="btn btn-primary" />
+                <input id="btnInsert" type="button" class="btn btn-primary" value="Create-"/>
             </div>
             <div>
                 <h1 id="responseMessage"></h1>
@@ -87,7 +87,7 @@
                 state: $("#State").val(),
                 city: $("#City").val()
             };
-                
+
             var json = JSON.stringify(user);
 
             $.ajax({

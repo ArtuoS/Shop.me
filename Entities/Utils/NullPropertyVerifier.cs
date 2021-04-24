@@ -9,7 +9,6 @@ namespace Entities.Utils
     public static class NullPropertyVerifier
     {
         public static List<PropertyInfo> NullProperties { get; set; } = new List<PropertyInfo>();
-        private static string PropertyNames { get; set; }
         public static void IsAnyPropertyNull(object obj)
         {
             foreach (PropertyInfo property in obj.GetType().GetProperties())
@@ -38,14 +37,16 @@ namespace Entities.Utils
         public static string NullPropertiesToSting(this List<PropertyInfo> properties)
         {
             var i = 0;
+            var propertyNames = string.Empty;
             foreach (PropertyInfo property in properties)
             {
                 i++;
-                PropertyNames += property.Name.toString();
+                propertyNames += property.Name.toString();
                 if (i < properties.Count)
-                    PropertyNames += ", ";
+                    propertyNames += ", ";
             }
-            return PropertyNames;
+            propertyNames += " is/are not correct!";
+            return propertyNames;
         }
     }
 }
