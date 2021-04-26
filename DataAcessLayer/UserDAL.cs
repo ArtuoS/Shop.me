@@ -20,9 +20,23 @@ namespace DataAcessLayer
             _db = new ShopContext();
         }
 
-        public Task<Response> Delete(User item)
+        public async Task<Response> Delete(User item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var context = _db)
+                {
+                    context
+                        .Users
+                        .Remove(item);
+                    await context.SaveChangesAsync();
+                    return await ResponseModels.SuccessResponseModel();
+                }
+            }
+            catch (Exception e)
+            {
+                return await ResponseModels.FailedResponseModel(e.ToString());
+            }
         }
 
         public async Task<QueryResponse<User>> GetAll()
@@ -33,6 +47,7 @@ namespace DataAcessLayer
                 {
                     List<User> users = await context
                                        .Users
+                                       .Include(s => s.Stores)
                                        .ToListAsync();
                     return await QueryResponseModels<User>.SuccessQueryModel(users);
                 }
@@ -40,13 +55,26 @@ namespace DataAcessLayer
             catch (Exception e)
             {
 
-                throw;
+                return await QueryResponseModels<User>.FailedQueryModel(e.ToString());
             }
         }
 
-        public Task<SingleResponse<User>> GetById(int id)
+        public async Task<SingleResponse<User>> GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var context = _db)
+                {
+                    var user = await context
+                               .Users
+                               .FirstOrDefaultAsync(u => u.Id == id);
+                    return await SingleResponseModels<User>.SuccessSingleModel(user);
+                }
+            }
+            catch (Exception e)
+            {
+                return await SingleResponseModels<User>.FailedSingleModel(e.ToString());
+            }
         }
 
         public async Task<Response> Insert(User item)
@@ -66,9 +94,23 @@ namespace DataAcessLayer
             }
         }
 
-        public Task<Response> Update(User item)
+        public async Task<Response> Update(User item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var context = _db)
+                {
+                    context
+                        .Users
+                        .Update(item);
+                    await context.SaveChangesAsync();
+                    return await ResponseModels.SuccessResponseModel();
+                }
+            }
+            catch (Exception e)
+            {
+                return await ResponseModels.FailedResponseModel(e.ToString());
+            }
         }
     }
 }

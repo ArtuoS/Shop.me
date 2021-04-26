@@ -41,5 +41,12 @@ namespace PresentationLayer.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Users()
+        {
+            var users = await userBLL.GetAll();
+            return View(users);
+        }
     }
 }

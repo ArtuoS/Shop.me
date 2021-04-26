@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace Common.ResponseModels
 {
-    public static class QueryResponseModels<T>
+    public static class SingleResponseModels<T>
     {
-        public static async Task<QueryResponse<T>> SuccessQueryModel(List<T> items)
+        public static async Task<SingleResponse<T>> SuccessSingleModel(T item)
         {
-            QueryResponse<T> response = new QueryResponse<T>()
+            SingleResponse<T> response = new SingleResponse<T>()
             {
-                Data = items,
+                Data = item,
                 Message = "Success!",
                 Success = true,
                 ExceptionMessage = null
@@ -19,9 +19,9 @@ namespace Common.ResponseModels
             return response;
         }
 
-        public static async Task<QueryResponse<T>> FailedQueryModel(string exception)
+        public static async Task<SingleResponse<T>> FailedSingleModel(string exception)
         {
-            QueryResponse<T> response = new QueryResponse<T>()
+            SingleResponse<T> response = new SingleResponse<T>()
             {
                 Message = "Failed!",
                 Success = true,

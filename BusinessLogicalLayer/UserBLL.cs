@@ -24,7 +24,7 @@ namespace BusinessLogicalLayer
             }
             else
             {
-                return ResponseModels.FailedResponseModel(NullPropertyVerifier.NullProperties.NullPropertiesToSting());
+                return await ResponseModels.FailedResponseModel(NullPropertyVerifier.NullProperties.NullPropertiesToSting());
             }
         }
 
@@ -33,7 +33,7 @@ namespace BusinessLogicalLayer
             throw new NotImplementedException();
         }
 
-        public Task<Response> Delete(User item)
+        public async Task<Response> Delete(User item)
         {
             throw new NotImplementedException();
         }
@@ -43,9 +43,9 @@ namespace BusinessLogicalLayer
             throw new NotImplementedException();
         }
 
-        public Task<QueryResponse<User>> GetAll()
+        public async Task<QueryResponse<User>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _userDAL.GetAll();
         }
     }
 }

@@ -18,13 +18,13 @@ namespace Common.ResponseModels
             return response;
         }
 
-        public static async Task<Response> FailedResponseModel(string ex)
+        public static async Task<Response> FailedResponseModel(string exception)
         {
             Response response = new Response()
             {
                 Message = "Failed!",
                 Success = false,
-                ExceptionMessage = ex
+                ExceptionMessage = exception
             };
             return response;
         }
