@@ -2,8 +2,10 @@
 using Common.ResponseModels;
 using Entities.Entities;
 using Entities.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,9 +25,23 @@ namespace DataAcessLayer
             throw new NotImplementedException();
         }
 
-        public Task<QueryResponse<User>> GetAll()
+        public async Task<QueryResponse<User>> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var context = _db)
+                {
+                    List<User> users = await context
+                                       .Users
+                                       .ToListAsync();
+                    return await QueryResponseModels<User>.SuccessQueryModel(users);
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
         public Task<SingleResponse<User>> GetById(int id)
@@ -39,14 +55,14 @@ namespace DataAcessLayer
             {
                 using (var context = _db)
                 {
-                    await _db.Users.AddAsync(item);
-                    await _db.SaveChangesAsync();
-                    return ResponseModels.SuccessResponseModel();
+                    await context.Users.AddAsync(item);
+                    await context.SaveChangesAsync();
+                    return await ResponseModels.SuccessResponseModel();
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                return ResponseModels.FailedResponseModel(ex.ToString());
+                return await ResponseModels.FailedResponseModel(e.ToString());
             }
         }
 

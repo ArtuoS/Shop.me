@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Common.ResponseModels
 {
     public static class ResponseModels
     {
-        public static Response SuccessResponseModel()
+        public static async Task<Response> SuccessResponseModel()
         {
             Response response = new Response()
             {
@@ -17,7 +18,7 @@ namespace Common.ResponseModels
             return response;
         }
 
-        public static Response FailedResponseModel(string ex)
+        public static async Task<Response> FailedResponseModel(string ex)
         {
             Response response = new Response()
             {
