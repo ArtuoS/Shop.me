@@ -9,6 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -49,7 +50,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+                <td id="user-id">
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
@@ -88,3 +89,21 @@
         }
     </tbody>
 </table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnInsert").click(function () {
+            var id = $(this).attr('id-user');
+
+            $.ajax({
+                type: 'POST',
+                url: '/User/Insert',
+                data: json,
+                contentType: 'application/json',
+                dataType: 'html'
+            });
+        });
+    });
+</script>

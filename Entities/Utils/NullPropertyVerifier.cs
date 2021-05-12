@@ -20,6 +20,13 @@ namespace Entities.Utils
             }
         }
 
+        public static bool IsIdValid(int id)
+        {
+            if (id > 0)
+                return true;
+            return false;
+        }
+
         private static bool IsPropertyString(this Type type)
         {
             if (type == typeof(string))

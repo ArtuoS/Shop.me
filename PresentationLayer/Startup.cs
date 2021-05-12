@@ -17,6 +17,7 @@ using PresentationLayer.Models.InsertViewModels;
 using Entities.Entities;
 using AutoMapper;
 using Entities;
+using PresentationLayer.Models.QueryViewModels;
 
 namespace PresentationLayer
 {
@@ -43,6 +44,7 @@ namespace PresentationLayer
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<UserInsertViewModel, User>();
+                cfg.CreateMap<User, UserQueryViewModel>();
             });
 
             IMapper mapper = config.CreateMapper();

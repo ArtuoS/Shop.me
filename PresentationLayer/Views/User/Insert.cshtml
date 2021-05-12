@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" id="Name" class="form-control" />
+                <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -58,10 +58,7 @@
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input id="btnInsert" type="button" class="btn btn-primary" value="Create-"/>
-            </div>
-            <div>
-                <h1 id="responseMessage"></h1>
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -71,37 +68,6 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#btnInsert").click(function () {
-            var user = {
-                name: $("#Name").val(),
-                lastName: $("#LastName").val(),
-                dateOfBirthday: $("#DateOfBirthday").val(),
-                gender: parseInt($("#Gender").val()),
-                email: $("#Email").val(),
-                password: $("#Password").val(),
-                country: $("#Country").val(),
-                state: $("#State").val(),
-                city: $("#City").val()
-            };
-
-            var json = JSON.stringify(user);
-
-            $.ajax({
-                type: 'POST',
-                url: '/User/Insert',
-                data: json,
-                contentType: 'application/json',
-                dataType: 'html'
-            });
-        });
-    });
-</script>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-

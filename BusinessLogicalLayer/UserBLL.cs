@@ -19,28 +19,30 @@ namespace BusinessLogicalLayer
         {
             NullPropertyVerifier.IsAnyPropertyNull(item);
             if (!NullPropertyVerifier.NullProperties.HasNullProperties())
-            {
                 return await _userDAL.Insert(item);
-            }
             else
-            {
                 return await ResponseModels.FailedResponseModel(NullPropertyVerifier.NullProperties.NullPropertiesToSting());
-            }
         }
 
-        public Task<Response> Update(User item)
+        public async Task<Response> Delete(int id)
         {
-            throw new NotImplementedException();
+            if (NullPropertyVerifier.IsIdValid(id))
+                return await _userDAL.Delete(id);
+            return await ResponseModels.FailedResponseModel($"{id.toString()} is not a valid ID.");
         }
 
-        public async Task<Response> Delete(User item)
+        public async Task<Response> Update(User item)
         {
-            throw new NotImplementedException();
+            if (item != null)
+                return await _userDAL.Update(item);
+            return await ResponseModels.FailedResponseModel("Object cannot be null.");
         }
 
-        public Task<SingleResponse<User>> GetById(int id)
+        public async Task<SingleResponse<User>> GetById(int id)
         {
-            throw new NotImplementedException();
+            if (NullPropertyVerifier.IsIdValid(id))
+                return await _userDAL.GetById(id);
+            return await SingleResponseModels<User>.FailedSingleModel($"{id.toString()} is not a valid ID.");
         }
 
         public async Task<QueryResponse<User>> GetAll()

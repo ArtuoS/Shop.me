@@ -20,7 +20,7 @@ namespace DataAcessLayer
             _db = new ShopContext();
         }
 
-        public async Task<Response> Delete(User item)
+        public async Task<Response> Delete(int id)
         {
             try
             {
@@ -28,7 +28,10 @@ namespace DataAcessLayer
                 {
                     context
                         .Users
-                        .Remove(item);
+                        .Remove(new User()
+                        {
+                            Id = id
+                        });
                     await context.SaveChangesAsync();
                     return await ResponseModels.SuccessResponseModel();
                 }
