@@ -10,7 +10,7 @@ namespace ShopMe.Tests.BLL
 {
     class FakeUserBLL : IUserService
     {
-        public Task<Response> Delete(User item)
+        public Task<Response> Delete(int id)
         {
             throw new NotImplementedException();
         }

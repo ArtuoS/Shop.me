@@ -10,7 +10,7 @@ namespace ShopMe.Tests.DAL
 {
     class FakeUserDAL : IUserService
     {
-        public Task<Response> Delete(User item)
+        public Task<Response> Delete(int id)
         {
             throw new NotImplementedException();
         }

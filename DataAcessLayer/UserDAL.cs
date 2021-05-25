@@ -24,17 +24,15 @@ namespace DataAcessLayer
         {
             try
             {
-                using (var context = _db)
-                {
-                    context
-                        .Users
-                        .Remove(new User()
-                        {
-                            Id = id
-                        });
-                    await context.SaveChangesAsync();
-                    return await ResponseModels.SuccessResponseModel();
-                }
+                using var context = _db;
+                context
+                    .Users
+                    .Remove(new User()
+                    {
+                        Id = id
+                    });
+                await context.SaveChangesAsync();
+                return await ResponseModels.SuccessResponseModel();
             }
             catch (Exception e)
             {
@@ -46,14 +44,12 @@ namespace DataAcessLayer
         {
             try
             {
-                using (var context = _db)
-                {
-                    List<User> users = await context
-                                       .Users
-                                       .Include(s => s.Stores)
-                                       .ToListAsync();
-                    return await QueryResponseModels<User>.SuccessQueryModel(users);
-                }
+                using var context = _db;
+                List<User> users = await context
+                                   .Users
+                                   .Include(s => s.Stores)
+                                   .ToListAsync();
+                return await QueryResponseModels<User>.SuccessQueryModel(users);
             }
             catch (Exception e)
             {
@@ -66,13 +62,11 @@ namespace DataAcessLayer
         {
             try
             {
-                using (var context = _db)
-                {
-                    var user = await context
-                               .Users
-                               .FirstOrDefaultAsync(u => u.Id == id);
-                    return await SingleResponseModels<User>.SuccessSingleModel(user);
-                }
+                using var context = _db;
+                var user = await context
+                           .Users
+                           .FirstOrDefaultAsync(u => u.Id == id);
+                return await SingleResponseModels<User>.SuccessSingleModel(user);
             }
             catch (Exception e)
             {
@@ -84,12 +78,10 @@ namespace DataAcessLayer
         {
             try
             {
-                using (var context = _db)
-                {
-                    await context.Users.AddAsync(item);
-                    await context.SaveChangesAsync();
-                    return await ResponseModels.SuccessResponseModel();
-                }
+                using var context = _db;
+                await context.Users.AddAsync(item);
+                await context.SaveChangesAsync();
+                return await ResponseModels.SuccessResponseModel();
             }
             catch (Exception e)
             {
@@ -101,14 +93,12 @@ namespace DataAcessLayer
         {
             try
             {
-                using (var context = _db)
-                {
-                    context
-                        .Users
-                        .Update(item);
-                    await context.SaveChangesAsync();
-                    return await ResponseModels.SuccessResponseModel();
-                }
+                using var context = _db;
+                context
+                    .Users
+                    .Update(item);
+                await context.SaveChangesAsync();
+                return await ResponseModels.SuccessResponseModel();
             }
             catch (Exception e)
             {
