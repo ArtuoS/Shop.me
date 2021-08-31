@@ -6,8 +6,8 @@ namespace Entities.Enums
 {
     public enum EGender
     {
-        Male,
-        Female,
-        Other
+        Male = 1,
+        Female = 2,
+        Other = 3
     }
 }

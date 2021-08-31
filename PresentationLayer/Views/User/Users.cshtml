@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<PresentationLayer.Models.QueryViewModels.UserQueryViewModel>
 
 @{
+    string currentUpdatingUserName = "";
     ViewData["Title"] = "Users";
 }
 
@@ -81,14 +82,33 @@
                     @Html.DisplayFor(modelItem => item.City)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    <button class="btn-danger btnDelete" onclick="deleteUser(@item.Id)">Delete</button>
+                </td>
+                <td>
+                    <button class="btn-warning btnEdit" data-bs-target="#modalUpdateUser" onclick="updateUser(@item.Id, @item.Name)">Edit</button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="modal fade" id="modalUpdateUser" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="lblModalUser">Editing @currentUpdatingUserName</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -106,4 +126,37 @@
             });
         });
     });
+
+    function deleteUser(id) {
+        if (isIdValid(id)) {
+            $.ajax({
+                type: 'POST',
+                url: "/User/Delete/",
+                async: true,
+                contentType: "application/json",
+                dataType: "json",
+                traditional: true,
+                data: JSON.stringify(id)
+            });
+        }
+    };
+
+    function updateUser(id, itemName) {
+        if (isIdValid(id)) {
+            @currentUpdatingUserName = itemName;
+            $.ajax({
+                type: 'POST',
+                url: "/User/Update/",
+                async: true,
+                //contentType: "application/json",
+                //dataType: "json",
+                traditional: true,
+                data: JSON.stringify(id)
+            });
+        }
+    };
+
+    const isIdValid = (id) => {
+        return id != undefined && id > 0;
+    };
 </script>

@@ -15,7 +15,7 @@ D:\C#\Shop.me\Entities\bin\Debug\netcoreapp3.1\Entities.dll
 D:\C#\Shop.me\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
 D:\C#\Shop.me\Entities\bin\Debug\netcoreapp3.1\Common.dll
 D:\C#\Shop.me\Entities\bin\Debug\netcoreapp3.1\Common.pdb
-D:\C#\Shop.me\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+D:\C#\Shop.me\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.AssemblyReference.cache
 D:\C#\Shop.me\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 D:\C#\Shop.me\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 D:\C#\Shop.me\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Common;
 using Entities.Entities;
+using Entities.Enums;
 using Entities.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -55,7 +56,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete([FromBody] int id)
         {
             Response response = await userBLL.Delete(id);
             return View();

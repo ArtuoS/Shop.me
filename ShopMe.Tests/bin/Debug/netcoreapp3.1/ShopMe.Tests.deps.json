@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ShopMe.Tests/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Entities": "1.0.0",
           "xunit.assert": "2.4.1",
           "xunit.core": "2.4.1",

@@ -4675,6 +4675,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Common >= 1.0.0",
       "Entities >= 1.0.0",
       "xunit.assert >= 2.4.1",
       "xunit.core >= 2.4.1",
@@ -4716,6 +4717,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\C#\\Shop.me\\Common\\Common.csproj": {
+              "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj"
+            },
             "D:\\C#\\Shop.me\\Entities\\Entities.csproj": {
               "projectPath": "D:\\C#\\Shop.me\\Entities\\Entities.csproj"
             }

@@ -158,6 +158,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "D:\\C#\\Shop.me\\Common\\Common.csproj": {
+                "projectPath": "D:\\C#\\Shop.me\\Common\\Common.csproj"
+              },
               "D:\\C#\\Shop.me\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\C#\\Shop.me\\Entities\\Entities.csproj"
               }

@@ -24,7 +24,7 @@ D:\C#\Shop.me\DataAcessLayer\bin\Debug\netcoreapp3.1\Common.dll
 D:\C#\Shop.me\DataAcessLayer\bin\Debug\netcoreapp3.1\Entities.dll
 D:\C#\Shop.me\DataAcessLayer\bin\Debug\netcoreapp3.1\Entities.pdb
 D:\C#\Shop.me\DataAcessLayer\bin\Debug\netcoreapp3.1\Common.pdb
-D:\C#\Shop.me\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csprojAssemblyReference.cache
+D:\C#\Shop.me\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csproj.AssemblyReference.cache
 D:\C#\Shop.me\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.AssemblyInfoInputs.cache
 D:\C#\Shop.me\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.AssemblyInfo.cs
 D:\C#\Shop.me\DataAcessLayer\obj\Debug\netcoreapp3.1\DataAcessLayer.csproj.CoreCompileInputs.cache
