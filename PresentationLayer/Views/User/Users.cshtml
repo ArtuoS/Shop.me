@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<PresentationLayer.Models.QueryViewModels.UserQueryViewModel>
 
 @{
-    string currentUpdatingUserName = "";
     ViewData["Title"] = "Users";
 }
 
@@ -82,10 +81,12 @@
                     @Html.DisplayFor(modelItem => item.City)
                 </td>
                 <td>
-                    <button class="btn-danger btnDelete" onclick="deleteUser(@item.Id)">Delete</button>
-                </td>
-                <td>
-                    <button class="btn-warning btnEdit" data-bs-target="#modalUpdateUser" onclick="updateUser(@item.Id, @item.Name)">Edit</button>
+                    <button type="button" class="btn btn-danger" id="btn-modal-delete" data-bs-toggle="modal"
+                    data-bs-target="#modalDeleteUser" value="@item.Id" data-name="@item.Name">Delete</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" data-bs-toggle="modal"
+                    data-bs-target="#modalUpdateUser" value="@item.Id" data-name="@item.Name">
+                        Edit
+                    </button>
                 </td>
             </tr>
         }
@@ -96,7 +97,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="lblModalUser">Editing @currentUpdatingUserName</h5>
+                <h5 class="modal-title" id="lblModalUserTitle"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -104,59 +105,75 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="btnSaveChanges">Save changes</button>
             </div>
         </div>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<div class="modal fade" id="modalDeleteUser" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="lblModalUserDeleteTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-delete-phrase">Are you sure you want to delete <b id="modal-delete-name"></b>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-delete-user">Yes, delete this user</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#btnInsert").click(function () {
-            var id = $(this).attr('id-user');
-
-            $.ajax({
-                type: 'POST',
-                url: '/User/Insert',
-                data: json,
-                contentType: 'application/json',
-                dataType: 'html'
-            });
-        });
-    });
-
-    function deleteUser(id) {
-        if (isIdValid(id)) {
-            $.ajax({
-                type: 'POST',
-                url: "/User/Delete/",
-                async: true,
-                contentType: "application/json",
-                dataType: "json",
-                traditional: true,
-                data: JSON.stringify(id)
-            });
-        }
-    };
-
-    function updateUser(id, itemName) {
-        if (isIdValid(id)) {
-            @currentUpdatingUserName = itemName;
-            $.ajax({
-                type: 'POST',
-                url: "/User/Update/",
-                async: true,
-                //contentType: "application/json",
-                //dataType: "json",
-                traditional: true,
-                data: JSON.stringify(id)
-            });
-        }
-    };
+    var btnModalDelete = document.getElementById("btn-modal-delete");
+    var btnDelete = document.getElementById("btn-delete-user");
+    var btnSaveChanges = document.getElementById("btnSaveChanges");
+    var btnUpdate = document.getElementById("btnUpdate");
 
     const isIdValid = (id) => {
         return id != undefined && id > 0;
     };
+</script>
+
+<script type="text/javascript">
+    $(() => {
+        btnDelete.addEventListener('click', () => {
+            let id = parseInt(btnModalDelete.value);
+            if (isIdValid(id)) {
+                $.ajax({
+                    type: 'POST',
+                    url: "/User/Delete/",
+                    async: true,
+                    contentType: "application/json",
+                    dataType: "json",
+                    traditional: true,
+                    data: JSON.stringify(id)
+                });
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(() => {
+        btnUpdate.addEventListener('click', () => {
+            let name = btnUpdate.getAttribute('data-name');
+            let lblModalUserTitle = document.getElementById("lblModalUserTitle");
+            lblModalUserTitle.innerHTML = "Editing User: " + name;
+        });
+
+        btnModalDelete.addEventListener('click', () => {
+            let name = btnModalDelete.getAttribute('data-name');
+            let spanName = document.getElementById('modal-delete-name');
+            spanName.innerHTML = name;
+        });
+    });
 </script>

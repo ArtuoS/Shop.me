@@ -1,7 +1,6 @@
 ﻿using Entities.Enums;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Entities.Entities
 {
@@ -20,12 +19,3 @@ namespace Entities.Entities
         public ICollection<Store> Stores { get; set; }
     }
 }
-
-// Id: int
-// Name : string
-// LastName : string
-// DateOfBirthday : DateTime
-// Gender : EGender int
-// Email : string
-// Password : string
-// AdressId : int

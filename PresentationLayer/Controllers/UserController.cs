@@ -40,7 +40,7 @@ namespace PresentationLayer.Controllers
         public async Task<IActionResult> Insert(UserInsertViewModel model)
         {
             User user = mapper.Map<User>(model);
-            Response response = await userBLL.Insert(user);
+            var response = await userBLL.Insert(user);
             return View();
         }
 
@@ -50,7 +50,7 @@ namespace PresentationLayer.Controllers
             var user = await userBLL.GetById(id);
             if (user.Data != null)
             {
-                Response response = await userBLL.Update(user.Data);
+                var response = await userBLL.Update(user.Data);
             }
             return View();
         }
@@ -58,22 +58,24 @@ namespace PresentationLayer.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete([FromBody] int id)
         {
-            Response response = await userBLL.Delete(id);
+            var response = await userBLL.Delete(id);
             return View();
         }
 
         [HttpGet]
         public async Task<IActionResult> Users()
         {
-            QueryResponse<User> response = await userBLL.GetAll();
-            IEnumerable<UserQueryViewModel> userMapper = mapper.Map<List<UserQueryViewModel>>(response.Data);
+            var response = await userBLL.GetAll();
 
-            if (!response.Success)
+            if (!response.IsSuccess())
             {
                 return View();
             }
-
-            return View(userMapper);
+            else
+            {
+                var users = mapper.Map<List<UserQueryViewModel>>(response.Data);
+                return View(users);
+            }
         }
     }
 }
